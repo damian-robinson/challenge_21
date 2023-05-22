@@ -1,72 +1,15 @@
 # Challenge 21
----
 
+## Step 1
+![](https://github.com/damian-robinson/challenge_21/blob/main/compiled.png?raw=true)
 
+## Step 2
+![](https://github.com/damian-robinson/challenge_21/blob/main/compiled2.png?raw=true)
 
-
-### Step 2: Create the KaseiCoin Crowdsale Contract
-
-In this subsection, you’ll define the KaseiCoin crowdsale contract. To do so, complete the following steps:
-
-1. Import the provided `KaseiCoinCrowdsale.sol` starter code into the Remix IDE.
-
-2. Have this contract inherit the following OpenZeppelin contracts:
-
-    * `Crowdsale`
-
-    * `MintedCrowdsale`
-
-3. In the `KaisenCoinCrowdsale` constructor, provide parameters for all the features of your crowdsale, such as `rate`, `wallet` (where to deposit the funds that the token raises), and `token`. Configure these parameters as you want for your KaseiCoin token.
-
-4. Compile the contract by using compiler version 0.5.0.
-
-5. Check for any errors, and debug them as needed.
-
-6. Take a screenshot of the successful compilation of the contract, and add it to the Evaluation Evidence section of the `README.md` file for your GitHub repository.
-
-### Step 3: Create the KaseiCoin Deployer Contract
-
-In this subsection, you’ll create the KaseiCoin deployer contract. Start by uncommenting the `KaseiCoinCrowdsaleDeployer` contract in the provided `KaseiCoinCrowdsale.sol` starter code.
-
-Next, in the `KaseiCoinCrowdsaleDeployer` contract, you’ll add variables to store the addresses of the `KaseiCoin` and `KaseiCoinCrowdsale` contracts, which this contract will deploy. Finally, you’ll complete the `KaseiCoinCrowdsaleDeployer` contract. To do so, complete the following steps:
-
-1. Create an `address public` variable named `kasei_token_address`, which will store the `KaseiCoin` address once that contract has been deployed.
-
-2. Create an `address public` variable named `kasei_crowdsale_address`, which will store the `KaseiCoinCrowdsale` address once that contract has been deployed.
-
-3. Add the following parameters to the constructor for the `KaseiCoinCrowdsaleDeployer` contract: `name`, `symbol`, and `wallet`.
-
-4. Inside of the constructor body (that is, between the braces), complete the following steps:
-
-    * Create a new instance of the `KaseiCoinToken` contract.
-
-    * Assign the address of the KaseiCoin token contract to the `kasei_token_address` variable. (This will allow you to easily fetch the token's address later.)
-
-    * Create a new instance of the `KaseiCoinCrowdsale` contract by using the following parameters:
-
-      * The `rate` parameter: Set `rate` equal to 1 to maintain parity with ether.
-
-      * The `wallet` parameter: Pass in `wallet` from the main constructor. This is the wallet that will get paid all the ether that the crowdsale contract raises.
-
-      * The `token` parameter: Make this the `token` variable where `KaseiCoin` is stored.
-
-    * Assign the address of the KaseiCoin crowdsale contract to the `kasei_crowdsale_address` variable. (This will allow you to easily fetch the crowdsale’s address later.)
-
-    * Set the `KaseiCoinCrowdsale` contract as a minter.
-
-    * Have the `KaseiCoinCrowdsaleDeployer` renounce its minter role.
-
-5. Compile the contract by using compiler version 0.5.0.
-
-6. Check for any errors, and debug them as needed.
-
-7. Take a screenshot of the successful compilation of the contract, and add it to the Evaluation Evidence section of the `README.md` file for your Git repository.
+## Step 3
+![](https://github.com/damian-robinson/challenge_21/blob/main/compiled3.png?raw=true)
 
 ### Step 4: Deploy and Test the Crowdsale on a Local Blockchain
-
-In this subsection, you’ll deploy the crowdsale to a local blockchain. You’ll then perform a real-world, preproduction test of your crowdsale. To do so, complete the following steps:
-
-> **Important:** Record a short video or take screenshots that illustrate the following steps as evidence of your deployed crowdsale contract.
 
 1. Deploy the crowdsale to a local blockchain by using Remix, MetaMask, and Ganache.
 
